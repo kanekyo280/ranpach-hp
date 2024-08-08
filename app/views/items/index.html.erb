@@ -1,0 +1,454 @@
+
+<body id="top">
+
+<div id="wrapper">
+  <div class="top_line"></div>
+
+<div id="wrapper_inner">
+
+
+  <!-- ヘッダー部分ここから // -->
+  <%= render "shared/header" %>
+  <!-- // ヘッダー部分ここまで -->
+
+  <!-- コンテンツ部分ここから // -->
+  <div id="contents" class="clearfix">
+
+    <!-- // スマホナビゲーション部分ここから -->
+    <script>
+      $(function(){
+        $(".accordion p").on("click", function() {
+            $(this).next().slideToggle();
+        });
+      });
+    </script>
+    <ul class="accordion">
+      <li class="navi_sp_li">
+        <p class="navi_menu color_white">
+          メニュー <i class="fa fa-chevron-down color_white"></i>
+        </p>
+        <ul class="navi_sp">
+          
+            <li class="font_14 border_bottom_navi navi_list clearfix">
+              <a href="/goope-baseball/"  class="footer_navi_top active">
+                <p class="navi_title">
+                  トップページ
+                </p>
+                <span class="fa fa-chevron-right navi_title_icon"></span>
+              </a>
+            </li>
+          
+            <li class="font_14 border_bottom_navi navi_list clearfix">
+              <a href="/goope-baseball/info"  class="footer_navi_info">
+                <p class="navi_title">
+                  お知らせ
+                </p>
+                <span class="fa fa-chevron-right navi_title_icon"></span>
+              </a>
+            </li>
+          
+            <li class="font_14 border_bottom_navi navi_list clearfix">
+              <a href="/goope-baseball/free/about"  class="footer_navi_free free_397358">
+                <p class="navi_title">
+                  チーム案内
+                </p>
+                <span class="fa fa-chevron-right navi_title_icon"></span>
+              </a>
+            </li>
+          
+            <li class="font_14 border_bottom_navi navi_list clearfix">
+              <a href="/goope-baseball/calendar"  class="footer_navi_calendar">
+                <p class="navi_title">
+                  練習・試合予定
+                </p>
+                <span class="fa fa-chevron-right navi_title_icon"></span>
+              </a>
+            </li>
+          
+            <li class="font_14 border_bottom_navi navi_list clearfix">
+              <a href="/goope-baseball/free/result"  class="footer_navi_free free_397356">
+                <p class="navi_title">
+                  試合結果
+                </p>
+                <span class="fa fa-chevron-right navi_title_icon"></span>
+              </a>
+            </li>
+          
+            <li class="font_14 border_bottom_navi navi_list clearfix">
+              <a href="/goope-baseball/free/info"  class="footer_navi_free free_397357">
+                <p class="navi_title">
+                  連絡事項
+                </p>
+                <span class="fa fa-chevron-right navi_title_icon"></span>
+              </a>
+            </li>
+          
+            <li class="font_14 border_bottom_navi navi_list clearfix">
+              <a href="/goope-baseball/reservation/event/"  class="footer_navi_event_reservation">
+                <p class="navi_title">
+                  体験・見学
+                </p>
+                <span class="fa fa-chevron-right navi_title_icon"></span>
+              </a>
+            </li>
+          
+            <li class="font_14 border_bottom_navi navi_list clearfix">
+              <a href="/goope-baseball/contact"  class="footer_navi_contact">
+                <p class="navi_title">
+                  お問い合わせ
+                </p>
+                <span class="fa fa-chevron-right navi_title_icon"></span>
+              </a>
+            </li>
+          
+        </ul>
+      </li>
+    </ul>
+    
+    <!-- // スマホナビゲーション部分ここまで -->
+
+    <!-- メイン部分ここから -->
+    <div id="main">
+
+      
+        <!----------------------------------------------
+
+        ページ：トップ
+
+      ---------------------------------------------->
+
+      
+      <script>
+        $(function() {
+          //スライド画像が0枚の場合、デフォルトの画像を残す
+          if ($(".rslides > li").length == 0) {
+            $('.rslides').append('<li><img src="/img/theme_spoon/slide.jpg"></li>');
+          }
+          //pagerの設定
+          var cnt=0;
+          $(".rslides li").each(function() {
+              ++cnt;
+          });
+          for (var i = 0; i < cnt; i++) {
+            var pager = "<li><a><i></i></a></li>"
+            $("#slider_pager").append(pager);
+          };
+          $("#slider_pager > li > a").attr("href" , "#");
+          $("#slider_pager > li > a > i").addClass("fa fa-circle");
+        });
+      </script>
+
+      <script>
+        $(function () {
+          $("#slider").responsiveSlides({
+            maxwidth: 700,
+            speed: 700,
+            nav: true,
+            manualControls: '#slider_pager',
+            timeout: 8000,
+            namespace: "callbacks",
+            before: function () {
+              $('.events').append("<li>before event fired.</li>");
+            },
+            after: function () {
+              $('.events').append("<li>after event fired.</li>");
+            }
+          });
+        });
+
+      </script>
+
+      <div class="callbacks_container slideshow">
+        <ul class="rslides " id="slider">
+          
+          <li>
+            <img src="//cdn.goope.jp/178908/210616145038g9mf_l.jpg" alt="">
+            <p class="caption color_brown">
+              <span class="caption_txt">
+                
+              </span>
+            </p>
+          </li>
+          
+          <li>
+            <img src="//cdn.goope.jp/178908/210617095943wrbz_l.jpg" alt="">
+            <p class="caption color_brown">
+              <span class="caption_txt">
+                
+              </span>
+            </p>
+          </li>
+          
+        </ul>
+      </div>
+      
+
+      <!-- Slideshow Pager -->
+      <ul id="slider_pager">
+      </ul>
+
+
+      <div class="welcome_area contents_box">
+        <h2 class="page_title_top font_14 main_headline">
+          ごあいさつ
+        </h2>
+        <p class="headline_border"></p>
+        <div class="message wysiwyg">
+          <p>＜サンプルテキスト＞</p>
+<p>少年野球クラブ「グーペチーム」のホームページです。</p>
+        </div>
+      </div>
+
+      
+      <div class="information_area contents_box">
+        <h2 class="page_title_info font_14 main_headline">
+          おしらせ
+        </h2>
+        <p class="headline_border"></p>
+        <ul>
+          
+          <li class="mar_btm_5">
+            <span class="top_info_date main_color">
+              2022-03-11
+            </span>
+            <a href="/goope-baseball/info/4441006">
+              月謝の支払いにオンライン決済を導入しました
+            </a>
+          </li>
+          
+          <li class="mar_btm_5">
+            <span class="top_info_date main_color">
+              2021-06-16
+            </span>
+            <a href="/goope-baseball/info/3977037">
+              体験・見学はお気軽に
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="welcome_area_photo">
+
+      </div>
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+      
+
+      
+
+
+      
+
+
+      
+
+      
+
+      
+
+      
+
+    </div>
+    <!-- // メイン部分ここまで -->
+
+
+    <!--サイド要素ここから // -->
+    <div id="side">
+      <!-- ナビゲーション部分ここから // -->
+       <%= render "shared/nav" %>
+      <!-- // ナビゲーション部分ここまで -->
+
+      <!-- サイドバー部分ここから // -->
+      <div id="sidebar">
+        <!-- 今日の予定部分ここから // -->
+        <div class="today_area sidebar mar_btm_10 today_area_smartphone border_radius border_dotted">
+          <div class="today_title font_14 border_bottom mar_btm_20 pad_btm_10">
+            <i class="fa fa-circle side_title font_10 main_color"></i>スケジュール
+          </div>
+          
+        </div>
+        <!-- // 今日の予定部分ここまで -->
+
+        <!-- カウンター部分ここから // -->
+        <div class="counter_area sidebar mar_btm_10 counter_area_smartphone border_radius border_dotted">
+          <div class="counter_title font_14 border_bottom mar_btm_20 pad_btm_10">
+            <i class="fa fa-circle side_title font_10 main_color"></i>カウンター
+          </div>
+          <div class="counter_today">
+            Today&nbsp;:&nbsp;<span class="num">14</span>
+          </div>
+          <div class="counter_yesterday">
+            Yesterday&nbsp;:&nbsp;<span class="num">4</span>
+          </div>
+          <div class="counter_total">
+            Total&nbsp;:&nbsp;<span class="num">11466</span>
+          </div>
+        </div>
+        <!-- // カウンター部分ここまで -->
+
+        <!-- QRコード部分ここから // -->
+        <div class="qr_area sidebar mar_btm_10 qr_area_smartphone border_radius border_dotted">
+          <div class="qr_title font_14 border_bottom mar_btm_20 pad_btm_10">
+            <i class="fa fa-circle side_title font_10 main_color"></i>携帯サイト
+          </div>
+          <div class="qr_img">
+            <img src="//r.goope.jp/qr/goope-baseball"width="100" height="100" />
+          </div>
+        </div>
+        <!-- // QRコード部分ここまで -->
+      </div>
+      <!-- // サイドバー部分ここまで -->
+
+      <!-- ナビゲーションパーツここから // -->
+      <div id="navi_parts_area">
+        
+      </div>
+      <!-- // ナビゲーションパーツここまで -->
+
+    </div>
+    <!-- // サイド要素ここまで -->
+
+  </div>
+  <!-- // コンテンツ部分ここまで -->
+
+
+  <!-- // トップへ戻る部分ここから -->
+  <script>
+    $(function() {
+      var $pagetop = $('.totop_button');
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          $pagetop.css('visibility', 'visible');
+        }
+        else {
+          $pagetop.css('visibility', 'hidden');
+        }
+      });
+      $pagetop.click(function () {
+        $('body, html').animate({ scrollTop: 0 }, 500);
+        return false;
+      });
+    });
+  </script>
+
+  <div id="totop_btn" class="fade">
+    <a href="#header">
+      <i class="fa fa-chevron-circle-up sub_color totop_button"></i>
+    </a>
+  </div>
+  <!-- // トップへ戻る部分ここまで -->
+
+
+</div><!-- // wrapper_innerここまで -->
+
+<!-- フッター部分ここから // -->
+
+    <!-- // フッターナビ部分ここまで -->
+
+    <div class="footer_social_wrap">
+      
+      <%= render "shared/footer" %>
+      
+    </div>
+
+    
+
+    <div class="copy_powered center color_white">
+      <div class="copyright copyright_smartphone">
+        &copy;2024 <a href="https://r.goope.jp/goope-baseball">少年野球クラブ「グーペチーム」</a>. All Rights Reserved.
+      </div>
+      <div class="powered powered_smartphone">
+        Powered by <a href="https://goope.jp/">グーペ</a> / <a href="https://admin.goope.jp/">Admin</a>
+      </div>
+      <div class="shop_rss">
+        <a href="/goope-baseball/feed.rss"><i class="fa fa-rss-square color_white"></i></a>
+      </div>
+    </div>
+
+    <br class="clear" />
+
+  </div><!-- // footer_inner -->
+</div>
+<!-- // フッター部分ここまで -->
+
+</div><!-- // wrapperここまで -->
+
+  <script type="text/javascript" src="/js/lib/jquery.clipsquareimage.js"></script>
+  <script type="text/javascript" src="/js/tooltip.js"></script>
+  <script type="text/javascript" src="/assets/responsiveslides/responsiveslides-1.55.min.js"></script>
+  <script type="text/javascript" src="/assets/colorbox/jquery.colorbox-1.6.4.min.js"></script>
+
+  <script>
+      $(function() {
+          //thickbox
+          $('#main').find('.thickbox').not('.js-colorbox-html').colorbox({
+              rel: 'thickbox',
+              width: '78%',
+              maxHeight: '88%',
+              previous: '<i class="fa fa-caret-left"></i>',
+              next: '<i class="fa fa-caret-right"></i>',
+              close: '<i class="fa fa-close"></i>',
+              current: ''
+          });
+
+          // RSS表示制御
+          if($('.copyright').css('display') == 'block') {
+              $('.copyright').css('display', 'inline-block');
+          }
+          if($('.shop_rss').css('display') == 'block') {
+              $('.shop_rss').css('display', 'inline-block');
+          }
+          if($('.powered').css('display') == 'block') {
+              $('.powered').css('display', 'inline-block');
+          }
+
+          //welcomeエリアのサブ画像を登録します。
+          $('<img>').appendTo('.welcome_area_photo').attr('src' , 'img/blank.gif');
+          $('.welcome_area_photo img').addClass('border_radius');
+
+          //サブ画像が登録されてない場合、画像エリアを削除。
+          if($('.welcome_area_photo img').attr('src') == 'img/blank.gif') {
+              $('.welcome_area_photo img').css('display', 'none');
+          }
+      });
+
+      $(window).on('load resize', function() {
+          // 電話番号表示制御
+          if (window.matchMedia('(max-width: 1000px)').matches) {
+              if ($('.shop_tel').css('display') === 'block') {
+                  $('#footer .shop_tel').css('display', 'block');
+              } else {
+                  $('#footer .shop_tel').css('display', 'none');
+              }
+          } else {
+              $('#footer .shop_tel').css('display', 'none');
+          }
+
+          //クリップイメージ
+          $('.photo_thumb > a.thickbox img').clipSquareImage();
+          $('.photo_thumb').css('visibility', 'visible');
+      });
+
+      //アコーディオンメニュー
+      $('.accordion_ul ul').hide();
+      $('.accordion_ul h1').click(function(e) {
+          $(this).toggleClass('active');
+          $(this).next('ul').slideToggle();
+      });
+  </script>
+
+</body>
+</html>
