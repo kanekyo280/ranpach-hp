@@ -1,0 +1,52 @@
+
+#side {
+    width: 200px;
+    text-align: center;
+}
+
+#navi {
+    padding: 0 23px;
+    background-color: #fff;
+    border-radius: 7px;
+}
+
+.mar_btm_10 {
+    margin-bottom: 10px;
+}
+
+.border_solid {
+    border: 1px #59C56D solid;
+}
+
+ul {
+    list-style: none;
+}
+
+.navi_ul li {
+    padding: 20px 0;
+    font-size: 14px;
+    border-bottom: 1px #59C56D dotted;
+    color: #3f260d;
+}
+
+.border_bottom a {
+    color: #3f260d;
+}
+
+.navi_ul li:last-child {
+    border: none;
+}
+
+.today_area {
+    padding: 0 23px;
+    background-color: #fff;
+    border-radius: 7px;
+    border: 1px #59C56D solid;
+}
+
+.today_title {
+    border-bottom: 1px #59C56D dotted;
+    padding: 10px 0;
+    margin-bottom: 40px;
+
+}

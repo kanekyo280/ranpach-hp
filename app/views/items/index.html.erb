@@ -2,13 +2,30 @@
 <%= render "shared/header" %>
 
 <div id="contents" class="clearfix">
-  <div class="main-image">
-    <%= image_tag  "top-page.jpg",  alt: "サンプル" %>
-  </div>
-  <div id="main">
-  </div>
-
 <%= render "shared/nav" %>
+
+  <div class="slide-wrapper">
+    <div id="slide" class="slide">
+    <div>
+      <%= image_tag "top-page.jpg" , class: "slide1" %>
+    </div>
+    <div>
+      <%= image_tag "player-sample.jpg" , class: "slide2" %>
+    </div>
+    <div>
+     <%= image_tag "top-page-sample.jpg" , class: "slide3" %>
+    </div>
+  </div>
+  <!-- ↓ 左右のボタン -->
+  <span id="prev" class="prev"></span>
+  <span id="next" class="next"></span>
+  <!-- ↓ インジケーター -->
+  <ul class="indicator" id="indicator">
+    <li class="list"></li>
+    <li class="list"></li>
+    <li class="list"></li>
+  </ul>
+</div>
 </div>
 
 <%= render "shared/footer" %>
