@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+body {
+    background-color: #fffcf8;
+}
+
+#wrapper {
+    width: 100%;
+}
+
+.top_line {
+    height: 20px;
+    background-color: #fff000;
+}
+
+#wrapper_inner {
+    margin: 0 auto;
+}
+
+#header.clearfix {
+    width: 960px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.site_logo {
+    font-size: 50px;
+    letter-spacing: 10px;
+    text-shadow: 2px 2px 3px #fff000;
+    padding-top: 20px;
+}
+
+.ranpach-logo {
+  width: 130px;
+  height: 130px;
+  border-radius: 100px;
+}
