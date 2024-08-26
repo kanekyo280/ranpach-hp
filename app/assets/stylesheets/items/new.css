@@ -1,0 +1,60 @@
+.player-contents-area {
+    width: 100%;
+}
+
+.form-wrap {
+    width: 800px;
+    height: 500px;
+    border: 4px outset gray;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.form-header {
+    border-bottom: 3px solid black;
+    height: 50px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    height: 300px;
+    padding: 25px 40px;
+}
+
+.form-textarea {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-uploadarea {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.send-btn-contents {
+    height:100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.indispensable {
+    color: red;
+    font-size: 12px;
+}
+
+.weight-bold-text {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.send-btn {
+    margin-right: 100px;
+    background-color: lightblue;
+    font-size: 20px;
+    height: 40px;
+    width: 70px;
+}

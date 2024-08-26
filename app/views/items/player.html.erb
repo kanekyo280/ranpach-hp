@@ -1,0 +1,47 @@
+<div id="wrapper">
+<%= render "shared/header" %>
+
+<div id="contents" class="clearfix">
+<%= render "shared/nav" %>
+    <div class="players-area">
+    <div class="players-header">
+        <div class="players-info">
+        <p>選手紹介</p>
+        </div>
+    </div>
+    <div class="players-contents">
+    <div class="btn-area">
+        <div class="btn add">
+        <%= link_to "追加", new_item_path %>
+        </div>
+         <div class="btn delete">
+         <%= link_to "削除", root_path %>
+        </div>
+    </div>
+        <ul class="players-list">
+        <% if @item.exists? %>
+         <% @item.each do |item| %>
+            <li class="player">
+            <%= link_to root_path do %>
+                 <%= image_tag item.image, class: "img" %>
+                <div class="player-name">
+                <%= item.player_name %>
+                </div>
+            <% end %>
+            </li>
+        <% end %>
+
+        <% else %>
+        <li class="player">
+            <%= image_tag "ranpach-logo", class: "img" %>
+                <div class="player-name">
+                らんぱち君
+                </div>
+            </li>
+        <% end %>
+        </ul>
+</div>
+</div>
+</div>
+<%= render "shared/footer" %>
+</div>
