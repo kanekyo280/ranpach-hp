@@ -1,0 +1,54 @@
+<div id="wrapper">
+<%= render "shared/header" %>
+
+<div class="player-contents-area">
+<%= form_with model:@player, url: player_path, local: true do |f| %>
+    <div class="form-wrap">
+        <div class="form-header">
+            <h1 class="form-header-text">
+            選手登録
+            </h1>
+        </div>
+        <div class="form-group">
+        <div class="form-textarea">
+            <div class="img-upload players-lists">
+                <div class="weight-bold-text">
+                選手画像
+                <span class="indispensable">*必須</span>
+                </div>
+            </div>
+            <div class="player-name-kanji players-lists">
+                <div class="weight-bold-text">
+                選手名（漢字）
+                <span class="indispensable">*必須</span>
+                </div>
+            </div>
+            <div class="player-name-kana players-lists">
+                <div class="weight-bold-text">
+                選手名（ふりがな）
+                <span class="indispensable">*必須</span>
+                </div>
+            </div>
+             <div class="player-position players-lists">
+                <div class="weight-bold-text">
+                ポジション
+                <span class="indispensable">*必須</span>
+                </div>
+            </div>
+            </div>
+            <div class="form-uploadarea">
+                <%= f.file_field :image, id:"player-image" %>
+                <%= f.text_area :player_name, class:"player-text", id:"players-name", placeholder:"選手名" %>
+                <%= f.text_area :player_kana, class:"player-text", id:"players-kana", placeholder:"選手名（ふりがな）" %>
+                <%= f.collection_select(:position_id, Position.all, :id, :name, {}, {class:"select-box", id:"position-category"}) %>
+            </div>
+    </div>
+     <div class="send-btn-contents">
+      <%= f.submit "登録" ,class:"send-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+</div>
+<% end %>
+</div>
+<%= render "shared/footer" %>
+</div>
