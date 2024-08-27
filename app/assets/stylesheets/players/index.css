@@ -24,10 +24,6 @@
     letter-spacing: 25px;
 }
 
-.players-contents {
-    height: 100%;
-}
-
 .players-list {
     display: flex;
     flex-wrap: wrap;

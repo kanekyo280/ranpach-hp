@@ -1,0 +1,60 @@
+<div id="wrapper">
+<%= render "shared/header" %>
+
+<div id="contents" class="clearfix">
+<%= render "shared/nav" %>
+    <div class="players-area">
+    <div class="players-header">
+        <div class="players-info">
+        <p>選手詳細</p>
+        </div>
+    </div>
+    <div class="players-contents-show">
+    <div class="player-img">
+    <%=  image_tag @player.image, class: "img-area"%>
+    </div>
+    <div class="information-area">
+    <div class="name-kanji margin-auto">
+    <div class="name-list">
+        名前
+    </div>
+    <h2 class="answer">
+    <span>
+    <%= @player.player_name %>
+    </span>
+    </h2 class="answer">
+    </div>
+    <div class="name-kana margin-auto">
+    <div class="name-list">
+        ふりがな
+    </div>
+    <h2 class="answer">
+    <span>
+    <%= @player.player_kana %>
+    </span>
+    </h2>
+    </div>
+    <div class="name-position margin-auto">
+    <div class="name-list">
+        ポジション
+    </div>
+    <h2 class="answer">
+    <span>
+    <%= @player.position.name %>
+    </span>
+    </h2>
+    </div>
+    <div class="btn-area">
+        <div class="btn edit">
+        <%= link_to "編集", edit_player_path, class: "edit-color" %>
+        </div>
+        <div class="btn delete">
+        <%= link_to "削除", player_path, data: {turbo_method: :delete}, class: "delete-color" %>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+<%= render "shared/footer" %>
+</div>
