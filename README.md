@@ -21,8 +21,11 @@ https://ranpach-hp.onrender.com
 ## 選手の追加,編集,削除
 
 1\. 選手紹介ページに移動する  
+https://i.gyazo.com/3b601c7466c4b7afcd8ab746ab36f246.mp4  
 2\. 追加ボタンを押して選手登録を行う  
+https://i.gyazo.com/6aaf142ef6b09b8f3523566722056b42.mp4  
 3\. 詳細ページから編集、削除を行う  
+https://i.gyazo.com/21cec0a566cdd96ee4d3c8a00ffcee32.mp4  
 ＊上記の操作を行う際 Basic 認証を行う
 
 # アプリケーションを作成した背景
