@@ -6,7 +6,8 @@
 
 選手の追加や編集、削除、試合の問い合わせが出来ます。
 
-#URL
+# URL
+
 https://ranpach-hp.onrender.com
 
 # Basic 認証
@@ -14,12 +15,13 @@ https://ranpach-hp.onrender.com
 - ID: redwing
 - password: ranpach
 
-# 利用方法 ##選手の追加
+# 利用方法
 
-1\. 選手紹介ページに移動する
-2\. 追加ボタンを押して選手登録を行う
+## 選手の追加
 
-## 詳細ページから編集、削除を行う
+1\. 選手紹介ページに移動する  
+2\. 追加ボタンを押して選手登録を行う  
+3\. 詳細ページから編集、削除を行う
 
 # アプリケーションを作成した背景
 
@@ -29,14 +31,14 @@ https://ranpach-hp.onrender.com
 
 # 実装予定の機能
 
-\* カレンダー機能を使用した日程管理,閲覧
+- カレンダー機能を使用した日程管理,閲覧
 
 # 開発環境
 
-\*javascript
-\*Ruby
-\*Ruby on rails
-\*mySQL
+- javascript
+- Ruby
+- Ruby on rails
+- mySQL
 
 # 工夫した点
 
